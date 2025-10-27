@@ -1,0 +1,5 @@
+@use '../assets/colors' as colors;
+
+body {
+    background: colors.$background-main;
+  }
