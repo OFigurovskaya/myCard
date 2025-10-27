@@ -1,10 +1,16 @@
 <script setup>
-import HomePage from './pages/HomePage.vue'
-import PersonalData from './pages/PersonalData.vue'
+import BaseHeader from "./components/BaseHeader.vue";
+import BaseFooter from "./components/BaseFooter.vue";
 </script>
 
 <template>
-   <router-view></router-view>
+  <div class="wrapper">
+    <BaseHeader />
+    <div class="main">
+      <router-view />
+    </div>
+      <BaseFooter />
+    </div>
 </template>
 
 <style lang="scss">
