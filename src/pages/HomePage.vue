@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 import getPhotos from '../stores/photos.js';
-import BaseHeader from '../components/BaseHeader.vue'
+import BaseHeader from '../components/BaseHeader.vue';
+import BaseFooter from '../components/BaseFooter.vue';
 
 const photos = getPhotos();
 const indexPage = ref(1);
@@ -10,7 +11,7 @@ const indexPage = ref(1);
 <template>
     <div class="wrapper">
         <BaseHeader :indexPage="indexPage" />
-        <div class="home">
+        <div class="main home">
             <div class="home__photo">
                 <div class="photo__left">
                     <svg fill="#ffffff" width="80px" height="80px" viewBox="0 0 1024 1024"
@@ -30,5 +31,6 @@ const indexPage = ref(1);
             </div>
             <div class="home__education"></div>
         </div>
+        <BaseFooter />
     </div>
 </template>
