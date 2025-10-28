@@ -9,8 +9,11 @@ export default function getText() {
     };
 
     let greeting = {
-
+        one: `Добрый день!`,
+        two: `Вы попали на сайт-визитку`,
+        three: `Меня зовут Олеся Фигуровская, ниже представлена информация обо мне`
     };
+    
 
     let stack = {
         one: `HTML5, CSS (flex, grid), Sass/Scss, БЭМ, кроссбраузерная и адаптивная верстка`,
