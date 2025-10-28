@@ -1,17 +1,44 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import getPhotos from '../stores/photos.js';
 import BaseHeader from '../components/BaseHeader.vue';
 import BaseFooter from '../components/BaseFooter.vue';
 
 const photos = getPhotos();
 const indexPage = ref(1);
+const showContent = ref(true);
+const hasVisited = ref(false);
+
+onMounted(() => {
+    if (localStorage.getItem('visited')) {
+        hasVisited.value = true;
+        showContent.value = false // пользователь уже заходил
+    } else {
+        localStorage.setItem('visited', 'true');
+        hasVisited.value = false;
+        showContent.value = true  // первый визит
+
+
+    }
+    setTimeout(() => {
+        showContent.value = false; // скрываем приветствие через 3 секунды
+    }, 3000);
+    return { hasVisited, showContent };
+});
+
+
 </script>
 
 <template>
     <div class="wrapper">
         <BaseHeader :indexPage="indexPage" />
-        <div class="main home">
+        <transition name="fade">
+            <div class="animate" v-if="showContent">
+                <h1>Добро пожаловать!</h1>
+                <h2>Спасибо за то, что зашли</h2>
+            </div>
+        </transition>
+        <div class="main home" v-if="!showContent">
             <div class="home__photo">
                 <div class="photo__left">
                     <svg fill="#ffffff" width="80px" height="80px" viewBox="0 0 1024 1024"

@@ -50,6 +50,16 @@ body {
     flex: 1;
 }
 
+.animate {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$header-fon;
+}
+
 .footer {
     background-color: #0d121c;
     padding: 0.5rem 0;
@@ -71,3 +81,14 @@ body {
         gap: 2vw
     }
 }
+
+/* Переход для плавного появления/исчезновения */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+  .fade-enter-from, .fade-leave-to {
+    opacity: 0;
+  }
+  .fade-enter-to, .fade-leave-from {
+    opacity: 1;
+  }
