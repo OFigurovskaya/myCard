@@ -1,5 +1,41 @@
 @use '../assets/colors' as colors;
+@use '../assets/effects' as effects;
 
 body {
     background: colors.$background-main;
-  }
+    font-size: colors.$fontSize;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.header {
+    background-color: #0d121c;
+    padding: 0.5rem 0;
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        padding: 0.5rem 0;
+    }
+
+    &__item {
+        width: 20vw;
+        text-align: center;
+        color: colors.$menu-color;
+        background-color: colors.$menuBtn-color;
+        padding: 0.5rem;
+        border-radius: 15px;
+        box-shadow:
+        6px 4px 6px colors.$shadow-color,
+        6px 4px 6px  colors.$shadow-color;
+        transition: box-shadow 0.3s ease;
+
+    }
+
+    &__item_active {
+        background-color: effects.$btnActive;
+    }
+}
