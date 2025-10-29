@@ -8,23 +8,17 @@ import BaseFooter from '../components/BaseFooter.vue';
 const photos = getPhotos().slider;
 const text = getText();
 const indexPage = ref(1);
-const showContent = ref(true);
-const hasVisited = ref(false);
+const hasVisited = ref(localStorage.getItem('visited') !== null);
+const showContent = ref(!hasVisited.value);
 const currentIndex = ref(0)
 
 onMounted(() => {
-    if (localStorage.getItem('visited')) {
-        hasVisited.value = true;
-        showContent.value = false // пользователь уже заходил
-    } else {
+    if (!hasVisited.value) {
         localStorage.setItem('visited', 'true');
-        hasVisited.value = false;
-        showContent.value = true  // первый визит
+        setTimeout(() => {
+            showContent.value = false; // скрываем приветствие через 3 секунды
+        }, 3000);
     }
-    setTimeout(() => {
-        showContent.value = false; // скрываем приветствие через 3 секунды
-    }, 3000);
-    return { hasVisited, showContent };
 });
 
 const changeSwitch = () => {

@@ -4,7 +4,7 @@
 body {
     background: colors.$background-main;
     font-size: colors.$fontSize;
-
+    color: colors.$menu-color
 }
 
 .wrapper {
@@ -77,6 +77,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5vh;
+}
+
+.project {
+    
 }
 
 
