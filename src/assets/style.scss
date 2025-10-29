@@ -83,19 +83,39 @@ body {
 .accordion {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     background-color: colors.$header-fon;
     margin-bottom: 4vh;
     gap: 40px;
     padding: 1.5rem;
+    border-radius: 20px;
 }
 
+.projects__header {
+    margin-bottom: 2vh;
+}
 
 .project {
-    &__name {
-        grid-column: 1/4;
+
+    &__block {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
         background-color: colors.$header-fon;
+        padding: 0 1.5rem;
         margin-bottom: 2vh;
+        border-radius: 20px;
+    }
+
+    &__plus {
+        transition: transform 0.4s ease;
+        cursor: pointer;
+    }
+    
+    &__plus.rotate {
+        transform: rotate(45deg);
     }
 
     &__descr {
@@ -181,3 +201,23 @@ body {
 .marker {
     list-style-type: circle;
 }
+
+.accordion {
+    overflow: hidden;
+  }
+  
+  /* Переход для раскрытия */
+  .accordion-enter-active,
+  .accordion-leave-active {
+    transition: max-height 0.4s ease;
+  }
+  
+  .accordion-enter-from,
+  .accordion-leave-to {
+    max-height: 0;
+  }
+  
+  .accordion-enter-to,
+  .accordion-leave-from {
+    max-height: 1000px; /* достаточно большое значение, чтобы вместить контент */
+  }

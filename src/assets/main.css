@@ -1,5 +1,10 @@
 @import './base.css';
 
+html {
+  scrollbar-gutter: stable;
+} 
+
+
 #app {
   width: 100%;
   margin: 0 auto;     
