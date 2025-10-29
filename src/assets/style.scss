@@ -79,8 +79,54 @@ body {
     gap: 1.5vh;
 }
 
+
+.accordion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: colors.$header-fon;
+    margin-bottom: 4vh;
+    gap: 40px;
+    padding: 1.5rem;
+}
+
+
 .project {
-    
+    &__name {
+        grid-column: 1/4;
+        background-color: colors.$header-fon;
+        margin-bottom: 2vh;
+    }
+
+    &__descr {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        order: 1;
+    }
+
+    &__stack {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        order: 2;
+    }
+
+    &__img {
+        order: 3;
+        width: 20vw;
+        margin: 0 auto;
+    }
+
+    &__link {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__git {
+        order: 5;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -130,4 +176,8 @@ body {
 .fade-enter-to,
 .fade-leave-from {
     opacity: 1;
+}
+
+.marker {
+    list-style-type: circle;
 }
