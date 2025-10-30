@@ -1,13 +1,7 @@
-<sctipt setup>
-
-
-</sctipt>
-
 <template>
-    <div class="footer">
-        <div class="footer__about">
-            <div class="footer__contacts">
-                <a href="https://t.me/+79166374949" class="footer__tel">
+    <div class="contactsComp">
+            <div class="container">
+                <a href="https://t.me/+79166374949" class="contactsComp__tel">Telegram
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
@@ -24,7 +18,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="https://wa.me/+79166374949" class="footer__tel">
+                <a href="https://wa.me/+79166374949" class="contactsComp__tel"> Whatsapp
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_16_1189)">
                             <path
@@ -41,7 +35,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="mailto:figurovskayaoo@gmail.com" class="footer__tel">
+                <a href="mailto:figurovskayaoo@gmail.com" class="contactsComp__tel">e-mail
                     <svg width="40px" height="40px" viewBox="0 -3.5 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 
@@ -62,8 +56,11 @@
                         </g>
                     </svg>
                 </a>
+                <a href="../assets/images/resume.doc" download="Фигуровская О. резюме.doc" class="contactsComp__tel download-button">
+                    <button>Скачать резюме</button>
+                </a>
             </div>
-            <div class="footer__github">
+            <div class="contactsComp__github">
                 <a href="https://github.com/OFigurovskaya?tab=repositories" class="footer__githubLink">
                     <svg fill="#ffffff" width="40px" height="40px" viewBox="0 0 1024 1024"
                         xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -74,5 +71,4 @@
                 </a>
             </div>
         </div>
-    </div>
 </template>
