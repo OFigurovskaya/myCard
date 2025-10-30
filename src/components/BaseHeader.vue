@@ -5,6 +5,8 @@ const props = defineProps(['indexPage']);
 
 const windowWidth = ref(0);
 
+const isOpen = ref(false)
+
 onMounted(() => {
     windowWidth.value = window.innerWidth;
     console.log(windowWidth.value);
@@ -20,8 +22,9 @@ onMounted(() => {
 });
 
 const toggleMenu = () => {
-    console.log('da!');
-}
+    isOpen.value = !isOpen.value;
+    console.log(isOpen.value);
+};
 
 </script>
 
@@ -42,12 +45,12 @@ const toggleMenu = () => {
                 <li class="header__link">Контакты</li>
             </router-link>
         </ul>
-        <ul class="burger__menu" v-if="windowWidth <= 768">
-            <button class="burger__logo" :class="{ open: isOpen }" @click="toggleMenu" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <button class="burger__logo" :class="{ open: isOpen }" @click="toggleMenu" aria-label="Toggle menu" v-if="windowWidth <= 768">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="burger__menu" :class="{ open: isOpen }"  v-if="windowWidth <= 768">
             <router-link to="/home" class="burger__item" :class="{ header__item_active: indexPage === 1 }">
                 <li class="burger__link">Домашняя страница</li>
             </router-link>
@@ -57,7 +60,7 @@ const toggleMenu = () => {
             <router-link to="/project" class="burger__item" :class="{ header__item_active: indexPage === 3 }">
                 <li cclass="burger__link">Проекты</li>
             </router-link>
-            <router-link to="/contacts" class="header__item" :class="{ header__item_active: indexPage === 4 }">
+            <router-link to="/contacts" class="burger__item" :class="{ header__item_active: indexPage === 4 }">
                 <li class="burger__link">Контакты</li>
             </router-link>
         </ul>

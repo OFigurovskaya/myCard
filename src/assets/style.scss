@@ -7,6 +7,7 @@ body {
     color: colors.$menu-color
 }
 
+
 .wrapper {
     width: 100%;
     display: flex;
@@ -49,6 +50,7 @@ body {
 .burger {
     &__logo {
         position: relative;
+        z-index: 1100;
         width: 30px;
         height: 24px;
         display: flex;
@@ -58,49 +60,75 @@ body {
         background: transparent;
         border: none;
         padding: 0;
+        margin: 1vh 0 0 2vw;
 
         span {
             display: block;
             height: 4px;
-            background-color: #333;
+            background-color: rgb(221, 218, 218);
             border-radius: 2px;
             transition: all 0.3s ease;
-          }
+        }
 
-          span:nth-child(1) {
+        span:nth-child(1) {
             transform-origin: top left;
-          }
+        }
 
-          span:nth-child(2) {
+        span:nth-child(2) {
             width: 100%;
-          }
+        }
 
-          span:nth-child(3) {
+        span:nth-child(3) {
             transform-origin: bottom left;
-          }
-      }
-      
-       
-    
-      
-      /* Средняя палочка */
-     
-      
-      /* Нижняя палочка */
-    
-      
-      /* Анимация при открытом меню */
-      .burger.open span:nth-child(1) {
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #222;
+        padding-top: 60px;
+        padding-right: 30px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+}
+
+.open {
+    span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
-      }
-      
-      .burger.open span:nth-child(2) {
+    }
+
+    span:nth-child(2) {
         opacity: 0;
-      }
-      
-      .burger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
+    }
+
+    span:nth-child(3) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+}
+
+.burger__menu.open {
+    transform: translateX(0);
+}
+
+/* Стили для ссылок в меню */
+.burger__item {
+    display: block;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.burger__item.header__item_active,
+.burger__item:hover {
+    background-color: #444;
 }
 
 .main {
@@ -129,6 +157,7 @@ body {
 }
 
 .photo {
+
     &__left,
     &__right {
         cursor: pointer;
@@ -182,9 +211,9 @@ body {
 
     &__plus {
         transition: transform 0.4s ease;
-    
+
     }
-    
+
     &__plus.rotate {
         transform: rotate(45deg);
     }
@@ -223,13 +252,14 @@ body {
 .contacts {
     display: flex;
     flex-direction: column;
+
     h2 {
         text-align: center;
         margin-bottom: 2.5vh;
     }
 
     h3 {
-     text-align: center;
+        text-align: center;
     }
 }
 
@@ -242,20 +272,20 @@ body {
 
 
 .contactsComp {
-   display: grid;
-   gap: 7vh;
-   flex: 1;
+    display: grid;
+    gap: 7vh;
+    flex: 1;
 
-   &__tel {
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-   }
+    &__tel {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+    }
 
-   &__github {
-    margin: 0 auto;
-    margin-bottom: 7vh;
-   }
+    &__github {
+        margin: 0 auto;
+        margin-bottom: 7vh;
+    }
 }
 
 .animate {
@@ -312,31 +342,45 @@ body {
 
 .accordion {
     overflow: hidden;
-  }
-  
-  /* Переход для раскрытия */
-  .accordion-enter-active,
-  .accordion-leave-active {
-    transition: max-height 0.4s ease;
-  }
-  
-  .accordion-enter-from,
-  .accordion-leave-to {
-    max-height: 0;
-  }
-  
-  .accordion-enter-to,
-  .accordion-leave-from {
-    max-height: 1000px; /* достаточно большое значение, чтобы вместить контент */
-  }
+}
 
-  .download-button {
+/* Переход для раскрытия */
+.accordion-enter-active,
+.accordion-leave-active {
+    transition: max-height 0.4s ease;
+}
+
+.accordion-enter-from,
+.accordion-leave-to {
+    max-height: 0;
+}
+
+.accordion-enter-to,
+.accordion-leave-from {
+    max-height: 1000px;
+    /* достаточно большое значение, чтобы вместить контент */
+}
+
+.download-button {
     button {
-         padding: 1vh 1vw; 
-         border-radius: 10px;
-         background-color: colors.$btn-color;
-         color: colors.$menu-color;
-         box-shadow: 5px 5px 5px cadetblue;
+        padding: 1vh 1vw;
+        border-radius: 10px;
+        background-color: colors.$btn-color;
+        color: colors.$menu-color;
+        box-shadow: 5px 5px 5px cadetblue;
     }
-  
-  }
+
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    body {
+        background: colors.$menu-color;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    body {
+        background: colors.$btn-color;
+    }
+}
