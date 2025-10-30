@@ -158,9 +158,11 @@ body {
 
 .photo {
 
-    &__left,
-    &__right {
+    &__left button,
+    &__right button {
         cursor: pointer;
+        background-color: inherit;
+        border: none;
     }
 }
 
