@@ -46,6 +46,63 @@ body {
     }
 }
 
+.burger {
+    &__logo {
+        position: relative;
+        width: 30px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        span {
+            display: block;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+          }
+
+          span:nth-child(1) {
+            transform-origin: top left;
+          }
+
+          span:nth-child(2) {
+            width: 100%;
+          }
+
+          span:nth-child(3) {
+            transform-origin: bottom left;
+          }
+      }
+      
+       
+    
+      
+      /* Средняя палочка */
+     
+      
+      /* Нижняя палочка */
+    
+      
+      /* Анимация при открытом меню */
+      .burger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      .burger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .burger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+}
+
 .main {
     padding: 1.5rem;
     flex: 1;

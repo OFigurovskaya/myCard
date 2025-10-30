@@ -5,7 +5,7 @@ import getText from '../stores/data.js'
 import BaseHeader from '../components/BaseHeader.vue';
 import BaseFooter from '../components/BaseFooter.vue';
 
-const photos = getPhotos().slider;
+const photos = ref(getPhotos().slider);
 const text = getText();
 const indexPage = ref(1);
 const hasVisited = ref(localStorage.getItem('visited') !== null);
