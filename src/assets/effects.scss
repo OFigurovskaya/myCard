@@ -1,1 +1,56 @@
-$btnActive:  #4a6d79;
+$btnActive: #4a6d79;
+$btnHover: #25c8dd;
+$hoverText: rgb(7, 82, 57);
+
+.header__item, 
+.project__block {
+    transition: color 0.5s ease-in-out 0s, background-color 0.5s ease-in-out 0s;
+}
+
+.header__item:hover,
+.project__block:hover {
+    background-color: $btnHover;
+    color: $hoverText;
+}
+
+.photo__left,
+.photo__right {
+    svg {
+        transition: transform 0.5s ease-in-out 0s;
+    }
+    svg:hover {
+        transform: scale(1.5);
+    }
+}
+
+.contactsComp__tel {
+    transition: transform 0.5s ease-in-out 0s;
+}
+
+.contactsComp__tel:hover {
+    transform: scale(1.5);
+}
+
+.footer__tel {
+    border: 0;
+    background-color: transparent;
+    svg {
+        transition: transform 0.5s ease-in-out 0s;
+    }
+
+    svg:hover {
+        transform: scale(1.5);
+    }
+}
+
+.footer__githubLink {
+    svg, p {
+        transition: transform 0.5s ease-in-out 0s;
+    }
+}
+
+.footer__githubLink:hover {
+    svg, p {
+        transform: scale(1.2);
+    }
+}
