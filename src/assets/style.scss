@@ -44,6 +44,8 @@ body {
     }
 }
 
+
+
 .burger {
     &__logo {
         position: relative;
@@ -390,6 +392,7 @@ body {
         box-shadow:
             6px 4px 6px colors.$shadow-color,
             6px 4px 6px colors.$shadow-color;
+            cursor: pointer;
     }
 
     a {
@@ -407,6 +410,16 @@ body {
             6px 4px 6px colors.$shadow-color,
             6px 4px 6px colors.$shadow-color;
 
+    }
+
+    .project__block,
+    .accordion {
+        background-color: colors.$header-fonLight;
+    }
+
+    .project__git a,
+    .project__link a {
+        color: colors.$colorLinkLight
     }
 }
 

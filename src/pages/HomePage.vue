@@ -58,7 +58,7 @@ const changeSwitch = () => {
                     </button>
                 </div>
                 <div class="slide">
-                    <img :src="photos[currentIndex]" alt="Photo" @touchstart="changeSwitch" />
+                    <img :src="photos[currentIndex]" alt="Photo" @touchstart.passive="changeSwitch" />
                 </div>
                 <div class="photo__right" @click="changeSwitch">
                     <button>

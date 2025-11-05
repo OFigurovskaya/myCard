@@ -1,16 +1,26 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-const ligthTheme = ref(false);
+const lightTheme = ref(localStorage.getItem('lightTheme') === 'true');
+
+onMounted(() => {
+    const wrapper = document.querySelector('.wrapper');
+    if (lightTheme.value) {
+        wrapper.classList.add('light');
+    } else {
+        wrapper.classList.remove('light');
+    }
+})
 
 const toggleTheme = () => {
-    ligthTheme.value = !ligthTheme.value;
-    if(ligthTheme.value === true) {
-        document.querySelector('.wrapper').classList.add('light')
+    lightTheme.value = !lightTheme.value;
+    if (lightTheme.value) {
+        document.querySelector('.wrapper').classList.add('light');
+        (localStorage.setItem('lightTheme', 'true'));
     } else {
-        document.querySelector('.wrapper').classList.remove('light')
+        document.querySelector('.wrapper').classList.remove('light');
+        (localStorage.setItem('lightTheme', 'false'));
     }
-    console.log(ligthTheme.value);
 };
 </script>
 

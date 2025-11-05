@@ -9,7 +9,6 @@ const isOpen = ref(false)
 
 onMounted(() => {
     windowWidth.value = window.innerWidth;
-    console.log(windowWidth.value);
 
     const onResize = () => {
         windowWidth.value = window.innerWidth;
