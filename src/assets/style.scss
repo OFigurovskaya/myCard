@@ -36,9 +36,7 @@ body {
         padding: 0.5rem;
         border-radius: 15px;
         box-shadow:
-            6px 4px 6px colors.$shadow-color,
-            6px 4px 6px colors.$shadow-color;
-
+            colors.$shadow-colorDark
     }
 
     &__item_active {
@@ -370,9 +368,47 @@ body {
         color: colors.$menu-color;
         box-shadow: 5px 5px 5px cadetblue;
     }
-
 }
 
+//ChangeTheme
+
+#theme-toggle {
+    margin-bottom: 5vh;
+    padding: 1vh 1vw;
+    border-radius: 12px;
+    background-color: colors.$changeThemeBtn;
+    border-color: transparent;
+    box-shadow: colors.$shadow-colorDark;
+    text-align: right;
+}
+
+.wrapper.light {
+    background-color: colors.$background-mainLight;
+    color: colors.$text-colorLight;
+
+    #theme-toggle {
+        box-shadow:
+            6px 4px 6px colors.$shadow-color,
+            6px 4px 6px colors.$shadow-color;
+    }
+
+    a {
+        color: colors.$text-colorLight
+    }
+
+    .header,
+    .footer {
+        background-color: colors.$header-fonLight;
+    }
+
+    .header__item {
+        background-color: colors.$header-fonLight;
+        box-shadow:
+            6px 4px 6px colors.$shadow-color,
+            6px 4px 6px colors.$shadow-color;
+
+    }
+}
 
 @media (min-width: 320px) and (max-width: 768px) {
     .accordion {

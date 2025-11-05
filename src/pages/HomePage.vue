@@ -4,6 +4,7 @@ import getPhotos from '../stores/photos.js';
 import getText from '../stores/data.js'
 import BaseHeader from '../components/BaseHeader.vue';
 import BaseFooter from '../components/BaseFooter.vue';
+import ChangeTheme from '@/components/ChangeTheme.vue';
 
 const photos = ref(getPhotos().slider);
 const text = getText();
@@ -42,6 +43,7 @@ const changeSwitch = () => {
             </div>
         </transition>
         <div class="main home" v-if="!showContent">
+            <ChangeTheme />
             <div class="home__greeting">
                 <h3 class="greeting" v-for="elem in text.greeting" :key="elem.id">{{ elem }}</h3>
             </div>
