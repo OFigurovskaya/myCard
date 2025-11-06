@@ -388,6 +388,16 @@ body {
     background-color: colors.$background-mainLight;
     color: colors.$text-colorLight;
 
+    .burger__menu.open {
+        background-color: colors.$burger-fonLight;
+
+        a {
+            color:colors.$colorLinkLight;
+        }
+    }
+    
+    
+
     #theme-toggle {
         box-shadow:
             6px 4px 6px colors.$shadow-color,
@@ -409,7 +419,6 @@ body {
         box-shadow:
             6px 4px 6px colors.$shadow-color,
             6px 4px 6px colors.$shadow-color;
-
     }
 
     .project__block,

@@ -1,3 +1,13 @@
+
+import shop3 from '@/assets/images/shop3.jpg';
+import shop2 from '@/assets/images/shop2.jpg';
+import test from '@/assets/images/test.jpg';
+import books from '@/assets/images/books.jpg';
+import checklist from '@/assets/images/checklist.jpg';
+import catalog from '@/assets/images/catalog.jpg';
+import lagoona from '@/assets/images/lagoona.jpg';
+import evklid from '@/assets/images/evklid.jpg';
+
 export default function getText() {
     let education = {
         one: `Образовательная программа Skillbox, Frontend-разработчик, 2023`,
@@ -63,7 +73,7 @@ export default function getText() {
                 6: `Sass (стилизация) `,
                 7: `Vite (сборка и дев-сервер)`
             },
-            img: `./src/assets/images/shop3.jpg`,
+            img: shop3,
             link: `https://ofigurovskaya.github.io/vue3-shop/#/`,
             git: `https://github.com/OFigurovskaya/vue3-shop`
         },
@@ -100,7 +110,7 @@ export default function getText() {
                 5: `Валидация форм`,
                 6: `Пагинация и фильтрация`
             },
-            img: `./src/assets/images/shop2.jpg`,
+            img: shop2,
             link: `https://ofigurovskaya.github.io/vue-app/index.html#/`,
             git: `https://github.com/OFigurovskaya/vue-app`
         },
@@ -124,7 +134,7 @@ export default function getText() {
                 4: `Chart.js;`,
                 5: `Vite`
             },
-            img: `./src/assets/images/test.jpg`,
+            img: test,
             link: `https://ofigurovskaya.github.io/test07_25/#/`,
             git: `https://github.com/OFigurovskaya/test07_25?tab=readme-ov-file`
         },
@@ -150,7 +160,7 @@ export default function getText() {
                 4: `Bootstrap (стилизация);`,
                 5: `Vite (сборка и дев-сервер).`
             },
-            img: `./src/assets/images/books.jpg`,
+            img: books,
             link: `https://ofigurovskaya.github.io/books/`,
             git: `https://github.com/OFigurovskaya/books`
         },
@@ -169,7 +179,7 @@ export default function getText() {
                 2: `CSS`,
                 3: `Vue3`
             },
-            img: `./src/assets/images/checklist.jpg`,
+            img: checklist,
             link: `https://ofigurovskaya.github.io/checklist-vue/`,
             git: `https://github.com/OFigurovskaya/checklist-vue`
         },
@@ -187,7 +197,7 @@ export default function getText() {
                 2: `CSS`,
                 3: `JavaScript`
             },
-            img: `./src/assets/images/catalog.jpg`,
+            img: catalog,
             link: `https://ofigurovskaya.github.io/project/catalog.html`,
             git: `https://github.com/OFigurovskaya/project`
         },
@@ -205,7 +215,7 @@ export default function getText() {
                 2: `CSS`,
                 3: `JavaScript`
             },
-            img: `./src/assets/images/lagoona.jpg`,
+            img: lagoona,
             link: `https://ofigurovskaya.github.io/Lagoona/`,
             git: `https://github.com/OFigurovskaya/Lagoona`
         },
@@ -223,7 +233,7 @@ export default function getText() {
                 2: `CSS`,
                 3: `JavaScript`
             },
-            img: `./src/assets/images/evklid.jpg`,
+            img: evklid,
             link: `https://ofigurovskaya.github.io/Evklid/`,
             git: `https://github.com/OFigurovskaya/Evklid`
         },

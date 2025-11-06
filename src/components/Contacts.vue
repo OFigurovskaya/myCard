@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
     <div class="contactsComp">
             <div class="container">
@@ -56,7 +59,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="../assets/images/resume.doc" download="Фигуровская О. резюме.doc" class="contactsComp__tel download-button">
+                <a href="/myCard/resume.doc" download="Фигуровская О. резюме.doc" class="contactsComp__tel download-button">
                     <button>Скачать резюме</button>
                 </a>
             </div>
